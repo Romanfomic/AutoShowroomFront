@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/images/rule.png" type="image/png">
+    <title>Автосалон</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="name">Black Lightning</a>
+        <div class="reg">
+            <form>
+                <input class="registr" type="button" id="enter" value="Вход" onClick='location.href=""'>
+                <input class="registr" type="button" id="registration" value="Регистрация" onClick='location.href="reg.html"'>
+            </form>
+        </div>
+    </header>
+    <nav>
+        <div class="navbarWrap">
+            <input id="menuToggle" type="checkbox" />
+            <label class="menuButton" for="menuToggle">
+                <span></span>
+            </label>
+            <ul class="navbarMenu">
+                <li><a class="menuItem" href="cars.html">Автомобили</a></li>
+                <li><a class="menuItem" href="services.html">Услуги</a></li>
+                <li><a class="menuItem" href="contact.html">Обратная связь</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="adds">
+        <div class="buy">
+            <img src="images/basket.png" style="width: 60px" id="gate" class="droppable">
+            <div class="addsSum">Сумма: </div>
+            <ul id="carItems">
+                <li>
+                    <img src="images/cards/card_2101.png" class="addsCar">
+                    <div class="price">100</div>
+                </li>
+                <li>
+                    <img src="images/cards/card_21.png" class="addsCar">
+                    <div class="price">200</div>
+                </li>
+                <li>
+                    <img src="images/cards/card_131.png" class="addsCar">
+                    <div class="price">320</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <article>
+        <div class="galary">
+        <p><img id="largeImg" src="images/Москвич.jpg" alt="Large image"></p>
+        <ul id="thumbs">
+            <li>
+                <a href="images/Запорожец.jpg"><img src="images/Запорожец.jpg"></a>
+            </li>
+            <li>
+                <a href="images/Волга.jpg"><img src="images/Волга.jpg"></a>
+            </li>
+            <li>
+                <a href="images/2107.jpg"><img src="images/2107.jpg"></a>
+            </li>
+            <li>
+                <a href="images/2101.jpg"><img src="images/2101.jpg"></a>
+            </li>
+            <li>
+                <a href="images/131.jpg"><img src="images/131.jpg"></a>
+            </li>
+        </ul>
+        </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footerItem">
+            <div class="footerTitle">
+                <div class="footerTitleText">О нас</div>
+                <div class="footerTitleLine"></div>
+            </div>
+            <div class="footerDescription">
+                <p><a class="footerLink" href="#">Партнеры</a></p>
+                <p><a class="footerLink" href="#">Конкуренты</a></p>
+                <p><a class="footerLink" href="#">О нас</a></p>
+            </div>
+        </div>
+        <div class="footerItem">
+            <div class="footerTitleText">Быстрые ссылки</div>
+            <div class="footerTitleLine"></div>
+            <div class="footerOtherDescription">
+                <p><a class="footerLink" href="https://en.wikipedia.org/wiki/VAZ-2101">ВАЗ-2101</a></p>
+                <p><a class="footerLink" href="https://en.wikipedia.org/wiki/GAZ-21">ГАЗ-21</a></p>
+                <p><a class="footerLink" href="https://en.wikipedia.org/wiki/Moskvitch_412">Москвич</a></p>
+            </div>
+        </div>
+        <div class="footerItem">
+            <div class="footerTitleText">Магазин</div>
+            <div class="footerTitleLine"></div>
+            <div class="footerDescription">
+                <p><a class="footerLink" href="#">Автомобили</a></p>
+                <p><a class="footerLink" href="#">Запчасти</a></p>
+                <p><a class="footerLink" href="#">Комплектующие</a></p>
+            </div>
+        </div>
+        <div class="footerItem">
+            <div class="footerTitleText">Контакты</div>
+            <div class="footerTitleLine"></div>
+            <div class="footerDescription">
+                <p>Пушкина д.Колотушнкина</p>
+                <p><a class="footerLink" href="tel:88005553535">Телефон</a></p>
+                <p><a class="footerLink" href="mailto:BLight@mail.ru">Почта</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src='script.js'></script>
+</body>
+</html>

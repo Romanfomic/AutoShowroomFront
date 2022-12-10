@@ -1,0 +1,217 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 70px 55px 1fr 170px;
+    gap: 10px;
+    background-color: #222831;
+}
+
+/*------------------------------------------*/
+/*                  HEADER                  */
+/*------------------------------------------*/
+
+header{
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.name{
+    margin-left: 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 26px;
+    text-decoration: none;
+    transition: all 0.7s;
+}
+.name:hover{ color: coral }
+.registr{
+    height: 40px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: coral;
+    color: white;
+    transition: all 0.7s;
+}
+.registr:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 7px black;
+}
+
+/*----------------------------------------------*/
+/*                  Navigation                  */
+/*----------------------------------------------*/
+
+nav{
+    border-radius: 10px;
+    border: coral solid 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.navbarMenu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.menuItem{
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+.menuItem:hover{
+    color: dodgerblue;
+}
+#menuToggle{ display: none }
+.menuButton{ display: none }
+#selectedNavItem{
+    background-color: coral;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/*----------------------------------------*/
+/*                  MAIN                  */
+/*----------------------------------------*/
+
+main{
+    border-radius: 10px;
+    border: coral solid 2px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    min-height: 700px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: all 0.5s;
+    width: 350px;
+}
+.card:hover { box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5); }
+.container { padding: 2px 16px; }
+.cards li{
+    list-style: none;
+    display: inline-block;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+
+/*------------------------------------------*/
+/*                  FOOTER                  */
+/*------------------------------------------*/
+
+footer{
+    color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 10px;
+}
+.footerItem{  margin: 0 30px; }
+.footerTitleText{
+    color: white;
+    font-size: 20px;
+}
+.footerTitleLine{
+    width: 40px;
+    border-bottom: 1px solid red;
+}
+.footerLink{
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+.footerLink:hover{ color: dodgerblue }
+
+/*-----------------------------------------*/
+/*                  MEDIA                  */
+/*-----------------------------------------*/
+
+@media all and (max-width: 1000px){
+    /* Hamburger */
+    #menuToggle {
+        display: flex;
+        opacity: 0;
+    }
+    .menuButton {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -7px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .menuButton > span,
+    .menuButton > span::before,
+    .menuButton > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: dodgerblue;
+    }
+    .menuButton > span::before {
+        content: '';
+        top: -8px;
+    }
+    .menuButton > span::after {
+        content: '';
+        top: 8px;
+    }
+    #menuToggle:checked ~ .menuButton > span {
+        transform: rotate(45deg);
+    }
+    #menuToggle:checked ~ .menuButton > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menuToggle:checked ~ .menuButton > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+    #menuToggle:checked ~ .navbarMenu {
+        visibility: visible;
+        left: 0;
+    }
+    .navbarMenu {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #ECEFF1;
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    }
+    .menuItem {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    .menuItem:hover {
+        background-color: #CFD8DC;
+    }
+}
