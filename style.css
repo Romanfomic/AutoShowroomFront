@@ -17,8 +17,9 @@ header{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    -webkit-align-items: center;
 }
+.name:hover{ color: coral }
 .name{
     margin-left: 20px;
     color: white;
@@ -27,7 +28,6 @@ header{
     text-decoration: none;
     transition: all 0.7s;
 }
-.name:hover{ color: coral }
 .registr{
     height: 40px;
     margin-right: 20px;
@@ -57,7 +57,7 @@ nav{
 }
 .navbarMenu{
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
     justify-content: space-around;
     list-style: none;
 }
@@ -165,7 +165,7 @@ footer{
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    align-items: center;
+    -webkit-align-items: center;
     gap: 10px;
 }
 .footerItem{  margin: 0 30px; }
@@ -215,7 +215,7 @@ footer{
     }
     .menuButton {
         display: flex;
-        align-items: center;
+        -webkit-align-items: center;
         position: relative;
         top: -7px;
         left: 20px;
